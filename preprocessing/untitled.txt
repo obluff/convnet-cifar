@@ -1,0 +1,15 @@
+"""File Contains Various Preprocessing Functions"""
+
+def min_max_scaling(x):
+    """
+        argument
+            - x: input array
+        return
+            - normalized x 
+    """
+    min_val = np.min(x)
+    max_val = np.max(x)
+    x = (x-np.min(x)) / (np.max(x)-np.min(x))
+    return x   
+
+
