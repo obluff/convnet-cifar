@@ -5,8 +5,6 @@ from skimage import transform
 
 def min_max_scaling(x):
     """
-    Standard normalization
-    
         argument
             - x: input array
         return
@@ -24,7 +22,7 @@ def rotate_random(array):
            -transformed array at random amount 
     
     """
-    return transform.rotate(array, np.random.uniform(-30, 30))
+    return transform.rotate(array, np.random.uniform(-40, 40))
 
 def flip_horizontal(array):
     """
