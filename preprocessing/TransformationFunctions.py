@@ -1,6 +1,6 @@
 """File Contains Various image Preprocessing Functions"""
 import numpy as np
-from skimage import transform 
+from skimage import transform
 
 
 def min_max_scaling(x):
@@ -8,7 +8,7 @@ def min_max_scaling(x):
         argument
             - x: input array
         return
-            - normalized x 
+            - normalized x
     """
     min_val = np.min(x)
     max_val = np.max(x)
@@ -16,18 +16,18 @@ def min_max_scaling(x):
 
 def rotate_random(array):
     """
-       argument 
+       argument
           - array:  a numpy image array
        return
-           -transformed array at random amount 
-    
+           -transformed array at random amount
+
     """
-    return transform.rotate(array, np.random.uniform(-40, 40))
+    return transform.rotate(array, np.random.uniform(-15, 15))
 
 def flip_horizontal(array):
     """
         argument
          - array: a numpy img array
-         return 
+         return
          - horizontally flipped numpy array"""
     return array[:, ::-1]
